@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#123c2e" />
+  <title>ASAP Conversation Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">ASAP OUTREACH</p>
+      <h1>Conversation Counter</h1>
+      <p id="dateLabel" class="muted"></p>
+    </header>
+
+    <section class="total-card">
+      <span>Total Conversations</span>
+      <strong id="totalCount">0</strong>
+    </section>
+
+    <section class="counter-grid" aria-label="Conversation categories">
+      <button class="counter" data-key="meatEater"><span>Meat Eater</span><strong id="meatEaterCount">0</strong><small>Tap to add +1</small></button>
+      <button class="counter" data-key="vegetarian"><span>Vegetarian</span><strong id="vegetarianCount">0</strong><small>Tap to add +1</small></button>
+      <button class="counter" data-key="vegan"><span>Vegan</span><strong id="veganCount">0</strong><small>Tap to add +1</small></button>
+      <button class="counter outcome" data-key="receptive"><span>Receptive</span><strong id="receptiveCount">0</strong><small>Might go vegan</small></button>
+      <button class="counter outcome" data-key="committed"><span>Committed</span><strong id="committedCount">0</strong><small>Committed to go vegan</small></button>
+    </section>
+
+    <p class="hint">Diet buttons count toward the total. Receptive and Committed are outcome tags and do not increase the total.</p>
+
+    <section class="actions">
+      <button id="undoBtn" class="secondary">↶ Undo Last Tap</button>
+      <button id="exportBtn" class="secondary">Export CSV</button>
+      <button id="resetBtn" class="danger">Reset Counts</button>
+    </section>
+
+    <details>
+      <summary>Session details</summary>
+      <label>Campus / Location<input id="campusInput" type="text" placeholder="e.g. Columbia University" /></label>
+      <label>Outreach person<input id="personInput" type="text" placeholder="e.g. Benjahmin" /></label>
+    </details>
+
+    <footer>Saved automatically on this device.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
