@@ -16,7 +16,7 @@ header { text-align: center; margin-bottom: 16px; }
 h1 { margin: 0; font-size: clamp(1.7rem,7vw,2.35rem); }
 .muted,.hint,footer { color: #637069; }
 .muted { margin: 5px 0 0; }
-.total-card { display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 20px; color:white; background:#123c2e; box-shadow:0 8px 24px rgba(18,60,46,.16); }
+.total-card { display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 20px; color:black; background:white; box-shadow:0 8px 24px rgba(18,60,46,.16); }
 .total-card span { font-weight:700; }
 .total-card strong { font-size:2.3rem; line-height:1; }
 .counter-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
