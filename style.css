@@ -1,40 +1,254 @@
-:root { 
-      /* font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17201c; */
-       /* background: #f3f6f4; */
-      background: rgb(19,39,106);
-      font-family:  font-family: 'DM Sans', sans-serif; font-style: bold; text-transform: uppercase; color: white:
+:root {
+    background: rgb(19, 39, 106);
+    font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: white;
+}
 
-      }
-* { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; 
-      /* background: linear-gradient(180deg,#e8f1ec,#f7f8f7 42%);  */
-     }
-button, input { font: inherit; }
-.app { width: min(100%, 560px); margin: 0 auto; padding: max(22px, env(safe-area-inset-top)) 16px max(30px, env(safe-area-inset-bottom)); }
-header { text-align: center; margin-bottom: 16px; }
-.eyebrow { margin: 0 0 4px; font-size: .78rem; font-weight: 800; letter-spacing: .16em; color: #286047; }
-h1 { margin: 0; font-size: clamp(1.7rem,7vw,2.35rem) color: white; }
-.muted,.hint,footer { color: #637069; }
-.muted { margin: 5px 0 0; }
-.total-card { display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 20px; color:black; background:white; box-shadow:0 8px 24px rgba(18,60,46,.16); }
-.total-card span { font-weight:700; }
-.total-card strong { font-size:2.3rem; line-height:1; }
-.counter-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
-.counter { min-height:132px; border:0; border-radius:20px; background:white; padding:14px 10px; box-shadow:0 4px 15px rgba(0,0,0,.07); color:#17201c; touch-action:manipulation; cursor:pointer; }
-.counter:active { transform:scale(.98); }
-.counter span { display:block; font-weight:800; font-size:1.03rem; }
-.counter strong { display:block; font-size:2.55rem; margin:4px 0; color:#1d5d43; }
-.counter small { display:block; color:#6c7771; }
-.counter.outcome { background:#edf6f0; }
-.counter:last-child { grid-column:1 / -1; min-height:120px; }
-.hint { font-size:.82rem; line-height:1.35; text-align:center; margin:12px 8px 16px; }
-.actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.actions button { min-height:52px; border-radius:14px; border:1px solid #cbd4cf; font-weight:750; padding:10px; }
-.secondary { background:white; color:#244338; }
-.danger { grid-column:1/-1; background:#fff5f4; color:#9b3029; border-color:#ecc8c5 !important; }
-details { margin-top:16px; background:white; border-radius:16px; padding:14px 16px; box-shadow:0 3px 12px rgba(0,0,0,.05); }
-summary { cursor:pointer; font-weight:750; }
-label { display:block; margin-top:12px; font-size:.9rem; font-weight:700; }
-input { width:100%; margin-top:5px; border:1px solid #ccd5d0; border-radius:12px; padding:12px; background:#fbfcfb; }
-footer { text-align:center; font-size:.78rem; margin-top:18px; }
-@media (max-width:370px){ .counter-grid{grid-template-columns:1fr}.counter:last-child{grid-column:auto}.actions{grid-template-columns:1fr}.danger{grid-column:auto} }
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: rgb(19, 39, 106);
+    font-family: inherit;
+    color: white;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* MAIN APP */
+.app {
+    width: min(100%, 560px);
+    margin: 0 auto;
+    padding:
+        max(22px, env(safe-area-inset-top))
+        16px
+        max(30px, env(safe-area-inset-bottom));
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.7rem, 7vw, 2.35rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+
+.muted {
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.hint,
+footer {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* TOTAL CONVERSATIONS CARD */
+.total-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-radius: 20px;
+    color: black;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.total-card span {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.total-card strong {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* COUNTER GRID */
+.counter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+/* INDIVIDUAL COUNTER BUTTONS */
+.counter {
+    min-height: 132px;
+    border: 0;
+    border-radius: 20px;
+    background: white;
+    padding: 14px 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    color: #17201c;
+    touch-action: manipulation;
+    cursor: pointer;
+    transition: transform 0.08s ease;
+}
+
+.counter:active {
+    transform: scale(0.98);
+}
+
+/* COUNTER LABEL */
+.counter span {
+    display: block;
+    font-weight: 800;
+    font-size: 1.03rem;
+    text-transform: uppercase;
+}
+
+/* COUNTER NUMBER */
+.counter strong {
+    display: block;
+    font-size: 2.55rem;
+    font-weight: 800;
+    margin: 4px 0;
+    color: #1d5d43;
+}
+
+/* SMALL DESCRIPTION UNDER COUNTER */
+.counter small {
+    display: block;
+    color: #6c7771;
+    font-weight: 600;
+}
+
+/* OUTCOME COUNTERS */
+.counter.outcome {
+    background: #edf6f0;
+}
+
+/* LAST COUNTER SPANS FULL WIDTH */
+.counter:last-child {
+    grid-column: 1 / -1;
+    min-height: 120px;
+}
+
+/* EXPLANATORY TEXT */
+.hint {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    text-align: center;
+    margin: 12px 8px 16px;
+}
+
+/* ACTION BUTTON AREA */
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.actions button {
+    min-height: 52px;
+    border-radius: 14px;
+    border: 1px solid #cbd4cf;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* SECONDARY BUTTONS */
+.secondary {
+    background: white;
+    color: #244338;
+}
+
+/* RESET / DANGER BUTTON */
+.danger {
+    grid-column: 1 / -1;
+    background: #fff5f4;
+    color: #9b3029;
+    border-color: #ecc8c5 !important;
+}
+
+/* DETAILS / SETTINGS PANEL */
+details {
+    margin-top: 16px;
+    background: white;
+    color: #17201c;
+    border-radius: 16px;
+    padding: 14px 16px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* FORM LABELS */
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* INPUT FIELDS */
+input {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccd5d0;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fbfcfb;
+    color: #17201c;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 0.78rem;
+    margin-top: 18px;
+}
+
+/* SMALL PHONE RESPONSIVENESS */
+@media (max-width: 370px) {
+
+    .counter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .counter:last-child {
+        grid-column: auto;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .danger {
+        grid-column: auto;
+    }
+}
