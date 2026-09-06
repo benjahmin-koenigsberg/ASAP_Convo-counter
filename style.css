@@ -14,7 +14,7 @@ button, input { font: inherit; }
 .app { width: min(100%, 560px); margin: 0 auto; padding: max(22px, env(safe-area-inset-top)) 16px max(30px, env(safe-area-inset-bottom)); }
 header { text-align: center; margin-bottom: 16px; }
 .eyebrow { margin: 0 0 4px; font-size: .78rem; font-weight: 800; letter-spacing: .16em; color: #286047; }
-h1 { margin: 0; font-size: clamp(1.7rem,7vw,2.35rem) color: white; }
+h1 { margin: 0; font-size: clamp(1.7rem,7vw,2.35rem) color: white!; }
 .muted,.hint,footer { color: #637069; }
 .muted { margin: 5px 0 0; }
 .total-card { display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 20px; color:black; background:white; box-shadow:0 8px 24px rgba(18,60,46,.16); }
