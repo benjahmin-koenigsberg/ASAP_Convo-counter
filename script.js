@@ -8,7 +8,15 @@ function load(){ try { return {...freshState(), ...JSON.parse(localStorage.getIt
 let state = load();
 
 function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
-function total(){ return state.counts.meatEater + state.counts.vegetarian + state.counts.vegan; }
+
+// function total(){ return state.counts.meatEater + state.counts.vegetarian + state.counts.vegan; }
+
+function total(){
+  return state.counts.meatEater
+    + state.counts.vegetarian
+    + state.counts.vegan
+    + state.counts.receptive
+
 function render(){
   categories.forEach(k => document.getElementById(k+'Count').textContent = state.counts[k] || 0);
   document.getElementById('totalCount').textContent = total();
