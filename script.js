@@ -16,6 +16,7 @@ function total(){
     + state.counts.vegetarian
     + state.counts.vegan
     + state.counts.receptive
+}
 
 function render(){
   categories.forEach(k => document.getElementById(k+'Count').textContent = state.counts[k] || 0);
