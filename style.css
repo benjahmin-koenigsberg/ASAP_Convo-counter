@@ -226,6 +226,24 @@ input {
     font-weight: 600;
 }
 
+.email-results-btn {
+    width: 100%;
+    min-height: 58px;
+    margin-top: 14px;
+    border: 0;
+    border-radius: 16px;
+    background: white;
+    color: #244338;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,.10);
+}
+
+.email-results-btn:active {
+    transform: scale(.98);
+}
+
 /* FOOTER */
 footer {
     text-align: center;
