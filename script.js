@@ -16,6 +16,8 @@ function total(){
     + state.counts.vegetarian
     + state.counts.vegan
     + state.counts.receptive
+    + state.counts.committed;
+
 }
 
 function render(){
