@@ -105,9 +105,15 @@ emailBtn.addEventListener('click', () => {
   ].join('\n');
 
   const mailto =
-    `mailto:${email}` +
+    `mailto:${encodeURIComponent(email)}` +
     `?subject=${encodeURIComponent(subject)}` +
     `&body=${encodeURIComponent(body)}`;
 
-  window.location.href = mailto;
+  const mailLink = document.createElement('a');
+  mailLink.href = mailto;
+  mailLink.style.display = 'none';
+
+  document.body.appendChild(mailLink);
+  mailLink.click();
+  document.body.removeChild(mailLink);
 });
