@@ -226,31 +226,36 @@ input {
     font-weight: 600;
 }
 
+
+/* EMAIL RESULTS BUTTON */
 .email-results-btn {
+    display: block;
     width: 100%;
     min-height: 58px;
     margin-top: 14px;
-    border: 0;
-    border-radius: 16px;
+    padding: 12px 16px;
+
+    border: 1px solid #cbd4cf;
+    border-radius: 14px;
+
     background: white;
     color: #244338;
+
+    font-family: inherit;
+    font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
+
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,.10);
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.08s ease;
 }
 
 .email-results-btn:active {
-    transform: scale(.98);
+    transform: scale(0.98);
 }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    font-size: 0.78rem;
-    margin-top: 18px;
-}
-
 /* SMALL PHONE RESPONSIVENESS */
 @media (max-width: 370px) {
 
